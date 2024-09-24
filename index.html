@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TUI</title>
+</head>
+<body>
+    <h1>Boekings Formulier</h1>
+    <form>
+        <label for="fname">Voornaam:</label><br>
+        <input type="text" name="fname" required pattern="*[A-Za-z]"><br>
+        <label for="lname">Achternaam:</label><br>
+        <input type="text" name="lname" required pattern="*[A-Za-z]"><br><br>
+        Geslacht:
+        <input type="radio" id="male" name="gender" value="man" checked>
+        <label for="male">Man</label>
+        <input type="radio" id="female" name="gender" value="vrouw">
+        <label for="female">Vrouw</label><br><br>
+
+        <label for="street">Straat en Huisnummer:</label><br>
+        <input type="text" name="street" required><br>
+        <label for="zip">Postcode:</label><br>
+        <input type="text" name="zip" required><br>
+        <label for="stad">Stad:</label><br>
+        <input type="text" name="stad" required><br>
+        <label for="country">Land:</label><br>
+        <input type="text" name="country" required><br><br>
+
+        <label for="BSN">BSN:</label><br>
+        <input type="text" name="BSN" maxlength="9" required pattern="*[0-9]"><br><br>
+
+        <label for="date1">Vertrek Datum:</label><br>
+        <input type="date" name="date1" onfocus="this.min=new Date().toISOString().split('T')[0]" required><br>
+        <label for="date2">Terugkomst:</label><br>
+        <input type="date" name="date2" onfocus="this.min=new Date().toISOString().split('T')[0]" required><br>
+        <label for="group">Aantal Reisgenoten:</label><br>
+        <input type="number" name="group" min="1" max="4" value="1"><br>
+
+        <label for="countries">Selecteer Land:</label><br>
+        <select name="coubntries" id="countries">
+            <option value="nederland">Nederland</option>
+            <option value="frankrijk">Frankrijk</option>
+            <option value="duitsland">Duitsland</option>
+        </select><br><br>
+
+        <label for="mail">Email:</label><br>
+        <input type="email" name="mail" required><br>
+        <label for="pass">Wachtwoord:</label><br>
+        <input type="password" name="pass" required><br><br>
+
+        <input type="submit" value="Boek Nu">
+        
+    </form>
+</body>
+</html>
